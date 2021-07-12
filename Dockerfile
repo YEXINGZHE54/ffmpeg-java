@@ -11,3 +11,8 @@ RUN yum install -y \
 RUN yum install -y maven
 RUN yum install -y curl 
 RUN yum install -y unzip
+RUN yum -y install epel-release
+RUN yum -y install python3 python3-pip
+RUN pip3 install s3cmd
+
+ENTRYPOINT /usr/bin/bash
